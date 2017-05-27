@@ -1,5 +1,8 @@
 import $ from 'jquery'
 
+var store = {
+  
+}
 export default {
   getMusicByArtist(artist) {
     var url = '//bcw-getter.herokuapp.com/?url=';
