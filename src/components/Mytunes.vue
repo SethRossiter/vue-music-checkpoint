@@ -1,16 +1,15 @@
 <template>
 <div class="my-tunes">
-<h1>My Songs</h1>
     <div class="row">
         <div class ="col-xs-12" v-for="song in songs">
-            <div class="well"> 
-                <div class="art">
+                <h1>My Songs</h1>
+                <div class="panel panel-default"> 
                     <img :src="song.artworkUrl60" class="img-circle">
-                </div>               
+                              
                     <a href="#linkAudio"><h1>Title: {{song.trackCensoredName}}</h1></a>
-                    <h1>Artist: {{song.artistName}}</h1>
-                    <h1>Ablum title: {{song.collectionName}}</h1>
-                    <h1>Price: {{song.collectionPrice}}</h1>
+                    <h3>Artist: {{song.artistName}}</h3>
+                    <h3>Ablum title: {{song.collectionName}}</h3>
+                    <h4>Price: {{song.collectionPrice}}</h4>
                     <audio controls id="linkAudio"><source :src="song.previewUrl"></audio>
                 <div class="card-action">
                     <button @click="removeTrack(song)">Remove</button>
@@ -56,20 +55,25 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+    margin-top: 73px;
+}
+
 h2{
     color: white;
-    text-align: center;
+    text-align: right;
     text-decoration: underline white;
 }
 .button{
-    background: #B59AB9;
+    background: green;
 }
-.well{
+.panel{
     text-align: center;
-    color: white;
-    background: #F7BDFF;
-    margin: 20px;
-    padding: 20px;
+    color: black;
+    background: #c0ded9;
+    margin-top: 15px;
+    width: 350px;
+    height: 300px;
 }
 .well:hover{
     background: #F9CCFF;

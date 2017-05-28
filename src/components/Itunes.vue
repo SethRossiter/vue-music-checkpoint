@@ -4,6 +4,7 @@
       <div class="form-group">
         <input type="text" class="form-control" v-model="artist" name= "artist">
         <button type="submit" class="btn btn-primary btn-lg">Search for Music</button>
+        <h1>Music</h1>
       </div>
     </form>
     <div class="row">
